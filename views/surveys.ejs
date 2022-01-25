@@ -1,0 +1,49 @@
+<%- include("header") -%>
+<div class="container"  style="padding: 2rem">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="/">Add Survey</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="/surveys">Veiw Surveys</a>
+    </li>
+  </ul>
+  <h1 class="h1">
+    All Surveys
+    </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">timestamp</th>
+        <th scope="col">gender</th>
+        <th scope="col">age</th>
+        <th scope="col">Type of Investment</th>
+        <th scope="col">Interest</th>
+        <th scope="col">factors</th>
+        <th scope="col">objectives</th>
+        <th scope="col">monitering</th>
+        <th scope="col">percentage</th>
+        <th scope="col">source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(const survey of surveys) { %>
+      <tr>
+        <th scope="col"><%= survey.timestamp %></th>
+        <th scope="col"><%= survey.gender %></th>
+        <th scope="col"><%= survey.age %></th>
+        <th scope="col"><%= survey.typeOfInvest %></th>
+        <th scope="col"><%= survey.interest %></th>
+        <th scope="col"><%= survey.factors %></th>
+        <th scope="col"><%= survey.objectives%></th>
+        <th scope="col"><%= survey.monitering%></th>
+        <th scope="col"><%= survey.percentage%></th>
+        <th scope="col"><%= survey.source%></th>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+
+<%- include("footer") -%>

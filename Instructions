@@ -1,0 +1,16 @@
+Prerequisite: Install Node
+
+Please install the following packages:
+
+npm init
+npm install modules
+npm install -g nodemon
+npm install ejs express body-parser sqlite3
+
+Run the application:
+nodemon index.js
+
+Open the following link
+Note: Please note that the port for the node in my system is 3001. It might be different for others. For convienence,
+        I have console.logged the port number where the node js runs so that it will be easy to identify the port number
+http://localhost:3001/

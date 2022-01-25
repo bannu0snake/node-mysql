@@ -1,0 +1,139 @@
+<%- include("header") -%>
+
+<div class="container" style="padding: 2rem">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/">Add Survey</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/surveys">Veiw Surveys</a>
+    </li>
+  </ul>
+  <h1 class="h1">
+      Survey Form
+  </h1>
+  <form action="/" method="post">
+    <div class="mb-3">
+      <label class="form-label">Gender</label>
+      <select
+        required
+        name="gender"
+        class="form-select"
+        style="width: min-content"
+        aria-label="select gender"
+      >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Transgender">Transgender</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input
+        required
+        name="age"
+        type="number"
+        style="width: 50%"
+        min="18"
+        max="100"
+        class="form-control"
+        id="age"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Type of Investment</label>
+      <select
+        required
+        name="typeOfInvest"
+        class="form-select"
+        style="width: min-content"
+        aria-label="select type of Investment"
+      >
+        <option value="MutualFunds">Mutual Funds</option>
+        <option value="EquityMarket">Equity Market</option>
+        <option value="Debentures">Debentures</option>
+        <option value="GovernmentBonds">Government Bonds</option>
+        <option value="FixedDeposits">Fixed Deposits</option>
+        <option value="GovernmentBonds">Government Bonds</option>
+        <option value="Gold">Gold</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label"
+        >are you interested in Investment?</label
+      >
+      <select
+        required
+        name="interest"
+        class="form-select"
+        style="width: min-content"
+        aria-label="are you interested in Investment"
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="factors" class="form-label">Factors to consider before investment</label>
+      <input
+        required
+        name="factors"
+        type="text"
+        class="form-control"
+        id="factors"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="objectives" class="form-label">Objective</label>
+      <input
+        required
+        name="objectives"
+        type="text"
+        class="form-control"
+        id="objectives"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">frequency of monitering</label>
+      <select
+        required
+        name="monitering"
+        class="form-select"
+        style="width: min-content"
+      >
+        <option value="daily">daily</option>
+        <option value="weekly">weekly</option>
+        <option value="monthly">monthly</option>
+        <option value="yearly">yearly</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="percentage" class="form-label"
+        >Expected returns Percentage</label
+      >
+      <input
+        required
+        name="percentage"
+        type="number"
+        style="width: 50%"
+        min="0"
+        max="1000"
+        class="form-control"
+        id="percentage"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="source" class="form-label">Source</label>
+      <input
+        required
+        name="source"
+        type="text"
+        class="form-control"
+        id="source"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include("footer") -%>
